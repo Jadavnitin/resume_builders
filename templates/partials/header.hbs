@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Resume Builder</title>
+   <link rel="shortcut icon" href="images/ResumeLogo.png" type="image/x-icon">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link rel="stylesheet" href="css/home.css">
+   <script src="js/home.js" defer></script>
+   
+</head>
+
+<body>
+      <header class="navbar">
+         <div class="logo-container">
+            <img src="images/ResumeLogo.png" alt="Resumelogo">
+            <h1>Resume Builder</h1>
+         </div>
+
+         <div class="navbar-link-container">
+            <a href="/" class="button navbar-links"><span>Home</span></a>
+            <a href="/fillDetails" class="button navbar-links"><span>Fill details</span></a>
+            <a href="/myResume" class="button navbar-links"><span>My Resume</span></a>
+            <a href="/about" class="button navbar-links"><span>About</span></a>
+         </div>
+
+         <div class="menu-toggle">
+            <button id="menuButton"><i class="fas fa-bars"></i></button>
+         </div>
+
+         <div id="dropdownMenu" class="dropdown hidden">
+            <a href="/" class="button navbar-links"><span>Home</span></a>
+            <a href="/fillDetails" class="button navbar-links"><span>Fill details</span></a>
+            <a href="/myResume" class="button navbar-links"><span>My Resume</span></a>
+            <a href="/about" class="button navbar-links"><span>About</span></a>
+            <button id="closeDropdown" class="button"><i class="fas fa-times"></i></button>
+         </div>
+
+         <label class="switch">
+            <input type="checkbox" class="toggle-switch">
+            <span class="slider"></span>
+         </label>
+      </header>
+
+
+   
+</body>
+
+
+</html>

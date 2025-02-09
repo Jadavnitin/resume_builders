@@ -1,0 +1,19 @@
+.fill-deatils-heading h1 {
+   background: linear-gradient(144deg, #d534ca, #ba2c0c 50%, #00ddeb);
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.fill-deatils-heading p {
+   font-size: 1.5rem;
+   font-weight: bold;
+   background: linear-gradient(144deg, #d534ca, #ba2c0c 50%, #00ddeb);
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width:455px) {
+   .fill-deatils-heading p {
+   font-size: 1.2rem;
+   }
+}
