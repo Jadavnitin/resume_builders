@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+.about-container {
+   font-family: "Inter", sans-serif;
+   padding: 3.8rem;
+   width: 100%;
+}
+
+.about-container h2 {
+   background:linear-gradient(179deg, #0cc809 30%, #d70aca 10%, #d85693 50%);
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-size: 1.50rem;
+   font-weight: 900;
+   margin-block: 1.23rem;
+}
+
+.about-content-img-container {
+   display: flex;
+   width: 100%;
+}
+
+.about-content-container {
+   width: 60%;
+}
+
+.about-content-container p {
+   width: 100%;
+   color: var(--exportpdfbtn);
+   line-height: 1.5;
+   margin-block: 1.19rem;
+   font-weight: 500;
+   font-size: 1.19rem;
+   letter-spacing: .02em;
+   word-spacing: .05em;
+   text-align: justify;
+}
+
+.about-img-container {
+   width: 40%;
+}
+
+.about-img-container img {
+   width: 100%;
+}
+
+.about-devloper-cotainer,
+.techused-container,
+.privacy-policy-container,
+.step-to-build-container {
+   width: 58%;
+}
+
+h3 {
+   background:linear-gradient(175deg, #0cc809 20%, #d70aca 10%, #d85693 50%);
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-size: 1.45rem;
+   font-weight: 900;
+   margin-block: 1.23rem;
+}
+
+ol {
+   padding: 0 0 0 2.25rem;
+}
+
+ul {
+   padding: 0 0 0 2.25rem;
+}
+
+li {
+   margin: 1rem;
+   font-size: 1.19rem;
+   color: var(--exportpdfbtn);
+   font-size:400;
+}
+
+li a {
+   text-decoration: none;
+   background: linear-gradient(165deg, #0cc809 20%, #d70aca 10%, #d85693 50%);
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+
+}
+
+@media (max-width: 480px) {
+   .about-container {
+      padding: 0.5rem;
+   }
+
+   .about-content-container p {
+      font-size: 0.99rem;
+   }
+
+   .about-container h2 {
+      font-size: 1.3rem;
+   }
+
+   ol {
+      padding: 0 0 0 1.25rem;
+   }
+
+   ul {
+      padding: 0 0 0 1.25rem;
+   }
+
+   h3 {
+      font-size: 1.17rem;
+   }
+
+   li {
+      font-size: 0.99rem;
+   }
+
+   .about-content-img-container {
+      flex-direction: column;
+      /* Stack content vertically */
+   }
+
+   .about-content-container,
+   .about-img-container {
+      width: 100%;
+   }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+   .about-container {
+      padding: 1.5rem;
+   }
+
+   .about-content-container {
+      width: 100%;
+   }
+
+   .about-img-container {
+      width: 100%;
+   }
+
+   .about-container h2 {
+      font-size: 1.4rem;
+   }
+
+   h3 {
+      font-size: 1.10rem;
+   }
+
+   li {
+      font-size: 1rem;
+   }
+
+   .about-content-container p,
+   li {
+      font-size: 1rem;
+   }
+}
+
+/* Laptops and desktops */
+@media (min-width: 769px) and (max-width: 1024px) {
+   .about-container {
+      padding: 2rem;
+   }
+
+   .about-content-container {
+      width: 100%;
+   }
+
+   .about-img-container {
+      width: 100%;
+   }
+}
+
+@media (max-width:925px) {
+   .about-content-img-container {
+      flex-direction: column;
+   }
+
+   .about-content-container {
+      width: 100%;
+   }
+
+   .about-img-container {
+      width: 80%;
+   }
+
+   .about-devloper-cotainer,
+   .techused-container,
+   .privacy-policy-container,
+   .step-to-build-container {
+      width: 100%;
+   }
+
+}
+
+/* Large screens (PCs) */
+@media (min-width: 1025px) {
+   .about-container {
+      padding: 3.8rem;
+   }
+
+   .about-content-container {
+      width: 60%;
+   }
+
+   .about-img-container {
+      width: 40%;
+   }
+
+   .about-container h2 {
+      font-size: 1.5rem;
+   }
+
+   .about-content-container p,
+   li {
+      font-size: 1.19rem;
+   }
+}

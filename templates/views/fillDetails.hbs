@@ -1,0 +1,851 @@
+<link rel="stylesheet" href="css/fill-details.css">
+<script src="js/fill-details.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<!-- google font ends here -->
+<!-- font awesome 6.4.2 -->
+<script src="https://kit.fontawesome.com/367f8e95b8.js" crossorigin="anonymous"></script>
+<link
+   href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Julius+Sans+One&family=Open+Sans&family=Source+Sans+Pro&display=swap"
+   rel="stylesheet">
+
+{{>header}}
+
+
+<div class="fill-container">
+
+   <main class="fill-details-main-container section" id="bio">
+
+      <div class="fill-deatils-heading">
+         <h1>Bio</h1>
+      </div>
+
+      <div class="fill-deatils-card">
+
+         <div class="fill-details-image-container">
+            <img src="images/ResumeLogo.png" alt="ResumeLogo" id="profile-image">
+         </div>
+
+         <div class="button-container">
+
+            <input type="file" id="upload-image-input" style="display: none;" accept="image/*" />
+
+            <button class="fill-details-btn " id="change-image-btn">
+               <span class="text">Change Image</span>
+            </button>
+
+
+
+            <button class="fill-details-btn" id="save-image-btn">
+               <span class="text">Save Image</span>
+            </button>
+
+         </div>
+
+         <div class="input-container">
+            <div class="fill-details-container">
+               <input required="" type="text" name="firstname" class="input">
+               <label class="label">FirstName</label>
+            </div>
+            <div class="fill-details-container">
+               <input required="" type="text" name="lastname" class="input">
+               <label class="label">LastName</label>
+            </div>
+            <div class="fill-details-container">
+               <input required="" type="text" name="role" class="input">
+               <label class="label">Role</label>
+            </div>
+            <div class="fill-details-container">
+               <input required="" type="text" name="description" class="input" id="description-input">
+               <label class="label">Description</label>
+            </div>
+         </div>
+
+         <div class="button-container">
+            <button class="fill-details-btn ">
+               <span class="text">Back</span>
+            </button>
+
+
+            <button class="fill-details-btn ">
+               <span class="text">Next & Submit</span>
+            </button>
+         </div>
+
+      </div>
+
+   </main>
+
+
+
+   <main class="fill-details-main-container1 section" id="Address">
+
+      <div class="fill-deatils-heading">
+         <h1>Address</h1>
+      </div>
+
+      <div class="fill-deatils-card">
+
+         <div class="input-container">
+            <div class="fill-details-container">
+               <input required="" type="number" name="postalcode" class="input">
+               <label class="label">Postal Code</label>
+            </div>
+            <div class="fill-details-container">
+               <input required="" type="text" name="city" class="input">
+               <label class="label">City</label>
+            </div>
+            <div class="fill-details-container">
+               <input required="" type="text" name="state" class="input">
+               <label class="label">State</label>
+            </div>
+            <div class="fill-details-container">
+               <input required="" type="text" name="country" class="input">
+               <label class="label">Country</label>
+            </div>
+            <div class="fill-details-container">
+               <input required="" type="number" name="phone" class="input">
+               <label class="label">Phone</label>
+            </div>
+            <div class="fill-details-container">
+               <input required="" type="email" name="email" class="input">
+               <label class="label">Email</label>
+            </div>
+         </div>
+
+         <div class="button-container">
+            <button class="fill-details-btn ">
+               <span class="text">Back</span>
+            </button>
+
+
+            <button class="fill-details-btn">
+               <span class="text">Next & Submit</span>
+            </button>
+         </div>
+
+      </div>
+
+   </main>
+
+
+
+   <main class="fill-details-main-container2 section" id="Experience">
+
+      <div class="fill-deatils-heading">
+         <h1>Experience</h1>
+      </div>
+
+      <div class="fill-deatils-card">
+         <div class="input-container">
+            <div class="fill-details-container">
+               <input required="" type="text" name="jobtitle" class="input">
+               <label class="label">Job Title</label>
+            </div>
+            <div class="fill-details-container">
+               <input required="" type="text" name="orgname" class="input">
+               <label class="label">Organization Name</label>
+            </div>
+            <div class="fill-details-container">
+               <input required="" type="number" name="startyear" class="input">
+               <label class="label">Start Year</label>
+            </div>
+            <div class="fill-details-container">
+               <input required="" type="number" name="endyear" class="input">
+               <label class="label">End Year</label>
+            </div>
+            <div class="fill-details-container">
+               <input required="" type="number" name="number" class="input">
+               <label class="label">Phone</label>
+            </div>
+            <div class="fill-details-container">
+               <input required="" type="email" name="email" class="input">
+               <label class="label">Email</label>
+            </div>
+
+
+            <button class="fill-details-btn remove-btn">
+               <span class="text">Remove</span>
+            </button>
+
+
+         </div>
+
+         <div class="button-container">
+            <button class="fill-details-btn" id="add-more-experinces">
+               <span class="text">Add More</span>
+            </button>
+         </div>
+
+         <div class="button-container">
+            <button class="fill-details-btn">
+               <span class="text">Back</span>
+            </button>
+
+
+            <button class="fill-details-btn">
+               <span class="text">Next & Submit</span>
+            </button>
+         </div>
+
+      </div>
+
+   </main>
+
+
+
+   <main class="fill-details-main-container3 section" id="Projects">
+
+      <div class="fill-deatils-heading">
+         <h1>Projects</h1>
+      </div>
+
+      <div class="fill-deatils-card">
+
+         <div class="input-container">
+
+            <div class="fill-details-container">
+               <input required="" type="text" name="projectname" class="input">
+               <label class="label">Project name</label>
+            </div>
+            <div class="fill-details-container">
+               <input required="" type="text" name="techstack" class="input">
+               <label class="label">Tech Stack</label>
+            </div>
+            <div class="fill-details-container">
+               <input required="" type="text" name="githublink" class="input">
+               <label class="label">Github Link</label>
+            </div>
+            <div class="fill-details-container">
+               <input required="" type="text" name="livelink" class="input">
+               <label class="label">Live Link</label>
+            </div>
+
+            <div class="fill-details-container">
+               <input required="" type="text" name="projectdescription" class="input" id="description-input">
+               <label class="label">Description</label>
+            </div>
+
+
+            <button class="fill-details-btn remove-btn">
+               <span class="text">Remove</span>
+            </button>
+
+
+         </div>
+
+         <div class="button-container">
+            <button class="fill-details-btn" id="add-more-projects">
+               <span class="text">Add Project</span>
+            </button>
+         </div>
+
+         <div class="button-container">
+            <button class="fill-details-btn ">
+               <span class="text">Back</span>
+            </button>
+
+
+            <button class="fill-details-btn">
+               <span class="text">Next & Submit</span>
+            </button>
+         </div>
+
+      </div>
+
+   </main>
+
+
+
+   <main class="fill-details-main-container4 section" id="Education">
+
+      <div class="fill-deatils-heading">
+         <h1>Education</h1>
+      </div>
+
+      <div class="fill-deatils-card">
+
+         <div class="input-container">
+
+            <div class="fill-details-container">
+               <input required="" type="text" name="degree" class="input">
+               <label class="label">Degree</label>
+            </div>
+            <div class="fill-details-container">
+               <input required="" type="text" name="domain" class="input">
+               <label class="label">Domain</label>
+            </div>
+
+            <div class="fill-details-container">
+               <input required="" type="text" name="university" class="input">
+               <label class="label">University</label>
+            </div>
+
+            <div class="fill-details-container">
+               <input required="" type="number" name="educationstartyear" class="input">
+               <label class="label">Start Year</label>
+            </div>
+            <div class="fill-details-container">
+               <input required="" type="number" name="educationendyear" class="input">
+               <label class="label">End Year</label>
+            </div>
+
+
+
+            <button class="fill-details-btn remove-btn">
+               <span class="text">Remove</span>
+            </button>
+
+
+         </div>
+
+         <div class="button-container">
+            <button class="fill-details-btn" id="add-more-educations">
+               <span class="text">Add More</span>
+            </button>
+         </div>
+
+         <div class="button-container">
+            <button class="fill-details-btn ">
+               <span class="text">Back</span>
+            </button>
+
+
+            <button class="fill-details-btn">
+               <span class="text">Next & Submit</span>
+            </button>
+         </div>
+
+      </div>
+
+   </main>
+
+
+   <main class="fill-details-main-container5 section" id="KeySkills">
+
+      <div class="fill-deatils-heading">
+         <h1>Key Skills</h1>
+      </div>
+
+      <div class="fill-deatils-card">
+
+         <div class="input-container">
+
+            <div class="fill-details-container">
+               <input required="" type="text" name="skills" class="input">
+               <label class="label">Skill</label>
+
+               <button class="fill-details-btn remove-btn">
+                  <span class="text">Remove</span>
+               </button>
+            </div>
+
+         </div>
+
+         <div class="button-container">
+            <button class="fill-details-btn " id="add-more-skills">
+               <span class="text">Add Skills</span>
+            </button>
+         </div>
+
+         <div class="button-container">
+            <button class="fill-details-btn ">
+               <span class="text">Back</span>
+            </button>
+
+
+            <button class="fill-details-btn">
+               <span class="text">Next & Submit</span>
+            </button>
+         </div>
+
+      </div>
+
+   </main>
+
+   <main class="fill-details-main-container6 section" id="Download">
+
+
+
+      <div class="fill-deatils-heading">
+         <h1>Download Resume</h1>
+      </div>
+
+
+
+
+      {{!-- template1 --}}
+      <div class="download-container download-templates" id="template-preview">
+
+         <div class="overlay">
+            <button class="backtoedit-btn">
+               <span> BACK TO EDIT </span>
+            </button>
+            <button class="downloadpdf-btn">
+               <span>DOWNLOAD PDF </span>
+            </button>
+         </div>
+
+         <div class="download-sidebar">
+            <img src="images/ResumeLogo.png" alt="Profile Picture">
+            <h1></h1>
+            <h2></h2>
+            <ul>
+               <li></li>
+               <li></li>
+               <li></li>
+            </ul>
+         </div>
+
+         <div class="download-main-content">
+            <div class="download-section">
+               <h3>Experience</h3>
+               <ul>
+                  <li><b></b></li>
+                  <li><b></b></li>
+                  <li><b></b></li>
+               </ul>
+            </div>
+
+
+
+            <div class="download-section">
+               <h3>Projects</h3>
+               <ul>
+                  <li><b></b></li>
+                  <li><b></b></li>
+                  <li>
+                     <a href="" target="_blank" class="githublink-with-inline-svg"></a>
+                     <a href="" target="_blank" class="livelink-with-inline-svg"></a>
+                  </li>
+                  <li></li>
+               </ul>
+            </div>
+
+            <div class="download-section">
+               <h3>Education</h3>
+               <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+               </ul>
+            </div>
+
+            <div class="download-section">
+               <h3>Key Skills</h3>
+               <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+
+
+      {{!-- template2 --}}
+      <div class="download2-container download-templates" id="template-preview">
+            <div class="overlay">
+               <button class="backtoedit-btn">
+                  <span> BACK TO EDIT </span>
+               </button>
+               <button class="downloadpdf-btn">
+                  <span>DOWNLOAD PDF </span>
+               </button>
+            </div>
+         <div class="template2-container">
+            <div class="leftPanel">
+               <img src="images/ResumeLogo.png" />
+               <div class="details">
+                  <div class="item bottomLineSeparator">
+                     <h2 class="h2">
+                        BIO
+                     </h2>
+                     <div class="smallText">
+                        <p class="p">
+                           <i class="fa fa-phone contactIcon" aria-hidden="true"></i>
+                           (+33) 777 777 77
+                        </p>
+                        <p class="p">
+                           <i class="fa fa-envelope contactIcon" aria-hidden="true"></i>
+                           <a href="mailto:lorem@ipsum.com@gmail.com">
+                              lorem@ipsum.com
+                           </a>
+                        </p>
+                        <p class="p">
+                           <i class="fa fa-map-marker contactIcon" aria-hidden="true"></i>
+                           363310, Ahemdabad , Gujarat , India,
+                        </p>
+                     </div>
+                  </div>
+
+
+                  <div class="item bottomLineSeparator">
+                     <h2 class="h2">
+                        SKILLS
+                     </h2>
+                     <div class="smallText">
+                        <div class="skill">
+                           <div>
+                              <span>Html</span>
+                           </div>
+                        </div>
+
+                        <div class="skill">
+                           <div>
+                              <span>Css</span>
+                           </div>
+                        </div>
+
+                        <div class="skill">
+                           <div>
+                              <span>React.js</span>
+                           </div>
+                        </div>
+
+                        <div class="skill">
+                           <div>
+                              <span>Next.js</span>
+                           </div>
+                        </div>
+
+                        <div class="skill">
+                           <div>
+                              <span>Node.js</span>
+                           </div>
+                        </div>
+
+                     </div>
+                  </div>
+
+
+                  <div class="item">
+                     <h2 class="h2">
+                        EDUCATION
+                     </h2>
+                     <div class="smallText">
+                        <p class="bolded white p">
+                           Bachelor of Technology
+                        </p>
+                        <p class="p">
+                           Silver Oak University
+                        </p>
+                        <p class="p">
+                           2020 - 2024
+                        </p>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+
+
+            <div class="rightPanel">
+               <div>
+                  <h1 class="h1">
+                     Jhon Doe
+                  </h1>
+                  <div class="smallText">
+                     <h3 class="h3">
+                        Web Developer
+                     </h3>
+                  </div>
+               </div>
+               <div>
+                  <h2 class="h2">
+                     About me
+                  </h2>
+                  <div class="smallText">
+                     <p class="p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis, justo sed feugiat
+                        pulvinar., quam ipsum tincidunt enim, ac gravida est metus sit amet neque. Curabitur ut arcu ut
+                        nunc finibus accumsan id id elit.
+                     </p>
+                     <p class="p">
+                        Vivamus non magna quis neque viverra finibus quis a tortor.
+                     </p>
+                  </div>
+               </div>
+
+
+               <div class="projects">
+                  <h2 class="h2">
+                     Projects
+                  </h2>
+                  <ul>
+                     <li>
+                        <div class="projectName bolded">
+                           <span>
+                              Project Name
+                           </span>
+                        </div>
+                        <div class="smallText">
+                           <p class="p">
+                              Quisque rutrum mollis ornare. In pharetra diam libero, non interdum dui imperdiet quis.
+                              Quisque aliquam sapien in libero finibus sodales. Mauris id commodo metus. In in laoreet
+                              dolor.
+                           </p>
+                           <ul>
+                              <li>
+                                 Integer commodo ullamcorper mauris, id condimentum lorem elementum sed. Etiam rutrum eu
+                                 elit ut hendrerit. Vestibulum congue sem ac auctor semper. Aenean quis imperdiet magna.
+                                 Sed eget ullamcorper enim. Vestibulum consequat turpis eu neque efficitur blandit sed
+                                 sit
+                                 amet neque. Curabitur congue semper erat nec blandit.
+                              </li>
+                           </ul>
+                           <p class="p">
+                              <span class="bolded">Tech Stack: </span>Accounting, Word, Powerpoint
+                           </p>
+                           <p class="p">
+                              <span class="bolded">Github Link:</span>Management, French
+                           </p>
+                           <p class="p">
+                              <span class="bolded">Live Link:</span>Management, French
+                           </p>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+
+               <div class="workExperience">
+                  <h2 class="h2">
+                     Work Experience
+                  </h2>
+                  <ul>
+                     <li>
+                        <div class="jobPosition">
+                           <span class="bolded">
+                              Accountant
+                           </span>
+                           <span>
+                              Jun 2014 - Sept 2015
+                           </span>
+                        </div>
+                        <div class="projectName bolded">
+                           <span>
+                              Company Name
+                           </span>
+                        </div>
+                     </li>
+
+
+                     <li>
+                        <div class="jobPosition">
+                           <span class="bolded">
+                              Digital Marketing Expert
+                           </span>
+                           <span>
+                              Nov 2020 - Sept 2021
+                           </span>
+                        </div>
+                        <div class="projectName bolded">
+                           <span>
+                              Company Name
+                           </span>
+                        </div>
+                     </li>
+
+                     <li>
+                        <div class="jobPosition">
+                           <span class="bolded">
+                              Accountant
+                           </span>
+                           <span>
+                              Jun 2017 - May 2020
+                           </span>
+                        </div>
+                        <div class="projectName bolded">
+                           <span>
+                              Company Name
+                           </span>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+
+            </div>
+            
+         </div>
+
+
+      </div>
+
+
+
+      {{!-- template3 --}}
+     <div class="template3-resume-container download-templates" id="template-preview">
+   <div class="overlay">
+      <button class="backtoedit-btn">
+         <span> BACK TO EDIT </span>
+      </button>
+      <button class="downloadpdf-btn">
+         <span>DOWNLOAD PDF </span>
+      </button>
+   </div>
+   
+   <div class="template3-left-sidebar">
+      <!--Profile Section -->
+      <img src="images/ResumeLogo.png" alt="Profile Picture" class="template3-img">
+      <h3 class="template3-heading">Profile</h3>
+      <p><strong>First Name:</strong> John</p>
+      <p><strong>Last Name:</strong> Martinez</p>
+      <p><strong>Role:</strong> Software Engineer</p>
+      <p><strong>Description:</strong> Passionate developer with expertise in building scalable web applications and
+         optimizing user experiences.</p>
+
+      <!-- Address Section -->
+      <h3 class="template3-heading">Address</h3>
+      <p><strong>Postal Code:</strong> 12345</p>
+      <p><strong>City:</strong> Your City</p>
+      <p><strong>State:</strong> Your State</p>
+      <p><strong>Country:</strong> Your Country</p>
+      <p><strong>Phone:</strong> +123-456-7890</p>
+      <p><strong>Email:</strong> username@provider.com</p>
+   </div><!-- template3-left-sidebar -->
+
+   <main class="template3-main-body">
+      <!-- Experience Section -->
+      <h2 class="template3-secondary"><i class="fa-solid fa-briefcase"></i> Experience</h2>
+      <div class="template3-experience">
+         <h3>Job Title: Software Developer</h3>
+         <p><strong>Organisation Name:</strong> Tech Solutions Inc.</p>
+         <p><strong>Start Year:</strong> 2019</p>
+         <p><strong>End Year:</strong> 2023</p>
+      </div>
+
+      <!-- Projects Section -->
+      <h2 class="template3-secondary"><i class="fa-solid fa-folder-open"></i> Projects</h2>
+      <div class="template3-project">
+         <h3>Project Name: Resume Builder</h3>
+         <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, Node.js</p>
+         <p><strong>GitHub:</strong> <a href="https://github.com/username/resume-builder"
+               target="_blank">github.com/username/resume-builder</a></p>
+         <p><strong>Live Link:</strong> <a href="https://resume-builder.com" target="_blank">resume-builder.com</a>
+         </p>
+         <p><strong>Description:</strong> A dynamic resume builder that allows users to create and customize
+            professional resumes.</p>
+      </div>
+
+      <!-- Education Section -->
+      <h2 class="template3-secondary"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+      <div class="template3-education">
+         <p><strong>Degree:</strong> Bachelor of Science</p>
+         <p><strong>Domain:</strong> Computer Science</p>
+         <p><strong>University:</strong> XYZ University</p>
+         <p><strong>Start Year:</strong> 2011</p>
+         <p><strong>End Year:</strong> 2015</p>
+      </div>
+
+      <!-- Key Skills Section -->
+      <h2 class="template3-secondary"><i class="fa-solid fa-lightbulb"></i> Key Skills</h2>
+      <ul class="template3-skills">
+         <li>JavaScript</li>
+         <li>HTML</li>
+         <li>CSS</li>
+      </ul>
+   </main><!-- template3-main-body -->
+     </div>
+
+
+
+      <div class="exportpdf-input-btn-container">
+
+         <div class="pdf-box-input">
+            <div class="border">
+               <input type="text" name="text" class="pdf-name-input" placeholder="Pdf name">
+            </div>
+         </div>
+
+         <button class="export-pdf-btn">
+            Export Pdf
+         </button>
+
+      </div>
+
+   </main>
+
+
+
+   <div class="fill-details-menu">
+
+      <button class="filldeatils-menu-element-container">
+         <svg data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <path
+               d="m1.5 13v1a.5.5 0 0 0 .3379.4731 18.9718 18.9718 0 0 0 6.1621 1.0269 18.9629 18.9629 0 0 0 6.1621-1.0269.5.5 0 0 0 .3379-.4731v-1a6.5083 6.5083 0 0 0 -4.461-6.1676 3.5 3.5 0 1 0 -4.078 0 6.5083 6.5083 0 0 0 -4.461 6.1676zm4-9a2.5 2.5 0 1 1 2.5 2.5 2.5026 2.5026 0 0 1 -2.5-2.5zm2.5 3.5a5.5066 5.5066 0 0 1 5.5 5.5v.6392a18.08 18.08 0 0 1 -11 0v-.6392a5.5066 5.5066 0 0 1 5.5-5.5z"
+               fill="whitesmoke"></path>
+         </svg>
+         Bio
+      </button>
+
+      <button class="filldeatils-menu-element-container">
+         <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true"
+            viewBox="0 0 24 24" data-testid="ContactMailIcon">
+            <path fill="whitesmoke"
+               d="M21 8V7l-3 2-3-2v1l3 2 3-2zm1-5H2C.9 3 0 3.9 0 5v14c0 1.1.9 2 2 2h20c1.1 0 1.99-.9 1.99-2L24 5c0-1.1-.9-2-2-2zM8 6c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm6 12H2v-1c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1zm8-6h-8V6h8v6z">
+            </path>
+         </svg>
+         Address
+      </button>
+
+      <button class="filldeatils-menu-element-container">
+         <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true"
+            viewBox="0 0 24 24" data-testid="WorkHistoryIcon">
+            <path fill="whitesmoke"
+               d="M18 11c1.49 0 2.87.47 4 1.26V8c0-1.11-.89-2-2-2h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h7.68c-.43-.91-.68-1.92-.68-3 0-3.87 3.13-7 7-7zm-8-7h4v2h-4V4z">
+            </path>
+            <path fill="whitesmoke"
+               d="M18 13c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm1.65 7.35L17.5 18.2V15h1v2.79l1.85 1.85-.7.71z">
+            </path>
+         </svg>
+         Experience
+      </button>
+
+      <button class="filldeatils-menu-element-container">
+         <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true"
+            viewBox="0 0 24 24" data-testid="LibraryBooksIcon">
+            <path fill="whitesmoke"
+               d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z">
+            </path>
+         </svg>
+         Projects
+      </button>
+
+      <button class="filldeatils-menu-element-container">
+         <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true"
+            viewBox="0 0 24 24" data-testid="SchoolIcon">
+            <path fill="whitesmoke" d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3 1 9l11 6 9-4.91V17h2V9L12 3z">
+            </path>
+         </svg>
+         Education
+      </button>
+
+      <button class="filldeatils-menu-element-container">
+         <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true"
+            viewBox="0 0 24 24" data-testid="StarsIcon">
+            <path fill="whitesmoke"
+               d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z">
+            </path>
+         </svg>
+         Key Skills
+      </button>
+
+      <button class="filldeatils-menu-element-container">
+         <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true"
+            viewBox="0 0 24 24" data-testid="DownloadIcon">
+            <path fill="whitesmoke" d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"></path>
+         </svg>
+         Download
+      </button>
+   </div>
+
+
+
+
+</div>
